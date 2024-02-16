@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form id="surveyForm" class="form">
+        <div id="logo">
+            <img src="images/logo.png" alt="logo">
+            <h2>Survey Form</h2>
+        </div>
+
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required>
+
+        <div class="button-container">
+            <div>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="70" required>
+            </div>
+
+            <div>
+                <label for="specialization">Specialization:</label>
+                <select id="specialization" name="specialization" required>
+                    <option value="Management">Management</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Finance">Finance</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="button-container">
+            <div>
+                <label for="experience">Experience:</label>
+                <input type="number" id="experience" min="0" max="50">
+            </div>
+
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" pattern="[0-9]{10}" name="phone" required>
+            </div>
+
+        </div>
+
+        <label for="achievements">Achievements:</label>
+        <textarea id="achievements" name="achievements" rows="3" required></textarea>
+
+        <button type="button" onclick="submitForm()">Submit Details</button>
+        <button type="button" onclick="updateRecords()">Show Records</button>
+    </form>
+
+    <form id="choiceform" class="form">
+        <div id=" proexp">
+            <div>
+                <label for="filterSpecialization">Filter by Specialization:</label>
+                <select id="filterSpecialization">
+                    <option value="all">All</option>
+                    <option value="Management">Management</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Finance">Finance</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="filterExperience">Filter by Experience:</label>
+                <input type="number" id="filterExperience" min="0" max="50">
+            </div>
+            <button id="filterbtn" type="button" onclick="filterDetails()">Apply Filters</button>
+            <button id="filterbtn" type="button" onclick="back()">Back</button>
+        </div>
+
+
+        <table id="detailsTable">
+
+            <h3>Records of Professionals</h3>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Specialization</th>
+                    <th>Experience</th>
+                    <th>Phone Number</th>
+                    <th>Achievements</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Table data will be populated here -->
+            </tbody>
+        </table>
+    </form>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

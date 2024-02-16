@@ -1,0 +1,190 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(images/bgd.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  #logo{
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+  }
+
+  img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  .form {
+    width: 400px;
+    background-color: #0b0457e7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    user-select: none;
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  input, select,button,textarea {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(67, 70, 109);
+    cursor: pointer;
+    color: #ffff;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+  }
+  
+  option{
+    background-color: #2e4d8f;
+  }
+
+  #gender{
+    margin-right: 10px;
+    color: #ffff; 
+    width: 100px;
+  }
+  
+  #age{
+    margin-right: 10px;
+    width: 80px;
+  }
+  
+  #specialization{
+    width: 200px;
+  }
+
+  #experience{
+    width: 100px;
+    margin-right: 10px;
+  }
+  
+  #phone{
+    width: 290px;
+  }
+  
+  button {
+    background-color: #2b27ae;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #2b27aebd;
+  }
+  
+  #choiceform{
+    width: 900px;
+    display: none;
+  }
+
+  #proexp{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+
+  #prof{
+    width: 300px;
+  }
+  #exp{
+    width: 150px;
+  }
+
+  #filterbtn{
+    width: 200px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+h3{
+  text-align: center;
+}
+
+table, th, td {
+    border: 3px solid #ddd;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+@media only screen and (max-width: 950px) {
+
+  #choiceform{
+    width: 700px;
+  }
+  table {
+    width: 20%;
+    font-size: 14px;
+}
+
+}
+
+@media only screen and (max-width: 770px) {
+
+  #choiceform{
+    width: 500px;
+  }
+  table {
+    width: 20%;
+    font-size: 9px;
+}
+
+ 
+}
+@media only screen and (max-width: 600px) {
+
+  .form {
+    width: 300px;
+    
+  }
+  #specialization{
+    width: 100px;
+  }
+
+  #phone{
+    width: 190px;
+  }
+
+  #choiceform{
+    width: 400px;
+  }
+  table {
+    width: 20%;
+    font-size: 6px;
+}
+ 
+}
